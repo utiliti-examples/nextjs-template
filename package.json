@@ -1,30 +1,32 @@
 {
-  "name": "reactjs-nextjs-fullstack-app-template",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "engines": {
-    "node": ">=16.15.0",
-    "yarn": ">=1.22.18",
-    "npm": "please use yarn"
-  },
-  "dependencies": {
-    "next": "13.0.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.24",
-    "@types/react-dom": "18.0.8",
-    "eslint": "8.26.0",
-    "eslint-config-next": "^13.0.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "typescript": "4.8.4"
-  }
+    "name": "reactjs-nextjs-fullstack-app-template",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prettier": "prettier --write ."
+    },
+    "engines": {
+        "node": ">=16.15.0",
+        "yarn": ">=1.22.18",
+        "npm": "please use yarn"
+    },
+    "dependencies": {
+        "next": "13.0.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "18.11.9",
+        "@types/react": "18.0.24",
+        "@types/react-dom": "18.0.8",
+        "eslint": "8.26.0",
+        "eslint-config-next": "^13.0.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "typescript": "4.8.4"
+    }
 }
