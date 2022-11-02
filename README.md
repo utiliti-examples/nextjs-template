@@ -1,34 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Utiliti Examples Template
 
-## Getting Started
+This is a fully functioning NextJS (v12) app with the bare minimum setup, allowing you to expand from here.
 
-First, run the development server:
+This comes complete with linting, prettier, git hooks, etc. Please see setup and usage below:
 
-```bash
-npm run dev
-# or
-yarn dev
+# Requirements
+
+## NodeJS
+
+Recommended using NVM to manage nodejs versions.
+
+```
+nvm install v16.15.0
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Yarn
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+NPM commands disabled, must use yarn.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+-   see package.json -> engines
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm install -g yarn
+```
 
-## Learn More
+# Setup
 
-To learn more about Next.js, take a look at the following resources:
+## Clone Project
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+git clone https://github.com/utiliti-examples/nextjs-template
+mv nextjs-template your-project
+cd your-project
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Install Dependencies
 
-## Deploy on Vercel
+```
+yarn
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Configurations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## CI Related
+
+### Husky
+
+Used for git hooks. Feel free to delete any of the ones you don't want, but these are good practices for any project.
+
+#### Husky Scripts
+
+-   `.husky/commit-msg`
+    -   Runs `./commitlint.config.js` to validate commit naming as well as a few other things.
+    -   See `./commitlint.config.js` header for valid commit subject types
+        -   Example: `git commit -m 'feat: Added feature XYZ`
+-   `.husky/pre-commit`
+    -   Runs `yarn lint` to make sure lint checks pass before saving commit
+-   `.husky/pre-push`
+    -   Runs `yarn build` to make sure build works before pushing to git
+
+### Prettier
+
+-   `.prettierignore`
+    -   Don't pretty files in here. Works like .gitignore
+-   `.prettierrc`
+    -   Prettier configurations.
+
+## Web Related
+
+-   `./pages/_app.tsx`
+    -   Imports our CSS files globally from `./styles/`
+
+### Skeleton CSS
+
+-   Used Skeleton CSS for minimal responsiveness
+    -   see: http://getskeleton.com/
+
+# Usage
+
+-   `yarn dev`
+    -   Run development environment
+-   `yarn build`
+    -   build app
+-   `yarn start`
+    -   start app
+-   `yarn lint`
+    -   lint app
+-   `yarn prettier`
+    -   prettify app
+-   `yarn prepare`
+    -   This runs when yarn runs, sets up husky if not already
