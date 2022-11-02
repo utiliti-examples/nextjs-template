@@ -1,26 +1,17 @@
-html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #0f172a;
+    color: rgb(255, 255, 255)
 }
 
 a {
-    color: inherit;
+    color: #6891b7;
     text-decoration: none;
 }
 
-* {
-    box-sizing: border-box;
+a:hover {
+    color: #5a7186;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-    body {
-        color: white;
-        background: black;
-    }
+.text-center {
+    text-align: center;
 }
