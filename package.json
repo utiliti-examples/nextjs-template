@@ -31,7 +31,6 @@
         "eslint-config-next": "^12.3.2",
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "^8.0.1",
-        "mini-css-extract-plugin": "^2.6.1",
         "prettier": "^2.7.1",
         "typescript": "4.8.4"
     }
