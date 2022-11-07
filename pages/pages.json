@@ -1,0 +1,8 @@
+{
+    "collection-wallet-manager": {
+        "id": 1,
+        "title": "Collection / Wallet Explorer",
+        "description": "Navigate through NFT collections and wallets.  View NFTs in a collection or wallet.",
+        "url": "/collection-wallet-explorer"
+    }
+}

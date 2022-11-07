@@ -4,7 +4,13 @@ import '../styles/normalize.css';
 import '../styles/skeleton.css';
 import '../styles/globals.css';
 
-import { NextPageWithLayout } from './page';
+import { NextPage } from 'next';
+import { ComponentType, ReactElement, ReactNode } from 'react';
+
+export type NextPageWithLayout<P = {}> = NextPage<P> & {
+    getLayout?: (_page: ReactElement) => ReactNode;
+    layout?: ComponentType;
+};
 
 interface AppPropsWithLayout extends AppProps {
     Component: NextPageWithLayout;

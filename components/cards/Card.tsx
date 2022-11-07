@@ -17,8 +17,8 @@ const Card: React.FC<ICard> = ({
     description,
     imgStyle,
     url = '#',
-    image = 'https://via.placeholder.com/300',
-    columns = 'three',
+    image = '/img/placeholder-300.png',
+    columns = 'four',
 }) => {
     const imageStyle =
         imgStyle === 'rounded'
@@ -40,9 +40,9 @@ const Card: React.FC<ICard> = ({
                     </div>
                 ) : null}
                 <div className="card-title">
-                    <h3>
+                    <h4>
                         <Link href={url}>{title}</Link>
-                    </h3>
+                    </h4>
                 </div>
                 <div className="card-content">
                     <p>{description}</p>

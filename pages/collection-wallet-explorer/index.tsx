@@ -1,17 +1,15 @@
 import SidebarPageTemplate from '../../components/layouts/sidebarpage/SidebarPageTemplate';
 
-import { NextPageWithLayout } from '../page';
+import { NextPageWithLayout } from './page';
 
-const Home: NextPageWithLayout = () => {
+const CollectionWalletExplorer: NextPageWithLayout = () => {
     return (
-        <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
-            <p>Single Page!</p>
-        </section>
+        <SidebarPageTemplate sidebar={'Sidebar!!'}>
+            <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
+                <p>Single Page!</p>
+            </section>
+        </SidebarPageTemplate>
     );
 };
 
-export default Home;
-
-Home.getLayout = (page) => {
-    return <SidebarPageTemplate>{page}</SidebarPageTemplate>;
-};
+export default CollectionWalletExplorer;

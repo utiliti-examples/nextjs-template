@@ -6,9 +6,14 @@ import Footer from '../footer/Footer';
 import styles from './SidebarPageTemplate.module.css';
 
 export interface ISidebarPageTemplate
-    extends React.ComponentPropsWithoutRef<'div'> {}
+    extends React.ComponentPropsWithoutRef<'div'> {
+    sidebar: React.ReactNode;
+}
 
-const SidebarPageTemplate: React.FC<ISidebarPageTemplate> = ({ children }) => {
+const SidebarPageTemplate: React.FC<ISidebarPageTemplate> = ({
+    sidebar,
+    children,
+}) => {
     return (
         <>
             <Head>
@@ -26,7 +31,7 @@ const SidebarPageTemplate: React.FC<ISidebarPageTemplate> = ({ children }) => {
             <main>
                 <div className="row">
                     <div className="three columns sidebar-wrapper">
-                        <div>Sidebar Content</div>
+                        <div>{sidebar}</div>
                     </div>
                     <div className="nine columns offset">{children}</div>
                 </div>
