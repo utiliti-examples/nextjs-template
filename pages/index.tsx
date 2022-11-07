@@ -1,12 +1,18 @@
 import SinglePageTemplate from '../components/layouts/singlepage/SinglePageTemplate';
+import Card from '../components/cards/Card';
 
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
     return (
-        <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
-            <p>Single Page!</p>
-        </section>
+        <div className="row">
+            <Card
+                title="Collection / Wallet Explorer"
+                description="Navigate through NFT collections and wallets.  View NFTs in a collection or wallet."
+                imgStyle="none"
+                url="/collection-wallet-explorer"
+            />
+        </div>
     );
 };
 

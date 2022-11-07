@@ -1,0 +1,9 @@
+.container {}
+
+.card-image-rounded {
+    border-radius: 1rem;
+}
+
+.card-image-square {
+    border-radius: 0;
+}
