@@ -14,24 +14,32 @@ const SidebarPageTemplate: React.FC<ISidebarPageTemplate> = ({ children }) => {
             <Head>
                 <title>Utiliti Examples</title>
             </Head>
-            <div className="row">
-                <div className="two columns">&nbsp;</div>
-                <div className="eight columns">
-                    <Header headerTextProp="Utiliti Examples" />
+            <header>
+                <div className="row">
+                    <div className="two columns">&nbsp;</div>
+                    <div className="eight columns">
+                        <Header headerTextProp="Utiliti Examples" />
+                    </div>
+                    <div className="two columns">&nbsp;</div>
                 </div>
-                <div className="two columns">&nbsp;</div>
-            </div>
-            <div className="row">
-                <div className="four columns">Sidebar</div>
-                <div className="eight columns offset">{children}</div>
-            </div>
-            <div className="row">
-                <div className="two columns">&nbsp;</div>
-                <div className="eight columns">
-                    <Footer />
+            </header>
+            <main>
+                <div className="row">
+                    <div className="three columns sidebar-wrapper">
+                        <div>Sidebar Content</div>
+                    </div>
+                    <div className="nine columns offset">{children}</div>
                 </div>
-                <div className="two columns">&nbsp;</div>
-            </div>
+            </main>
+            <footer>
+                <div className="row">
+                    <div className="two columns">&nbsp;</div>
+                    <div className="eight columns">
+                        <Footer />
+                    </div>
+                    <div className="two columns">&nbsp;</div>
+                </div>
+            </footer>
         </>
     );
 };

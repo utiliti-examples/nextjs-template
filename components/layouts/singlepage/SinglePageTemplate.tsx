@@ -14,25 +14,31 @@ const SinglePageTemplate: React.FC<ISinglePageTemplate> = ({ children }) => {
             <Head>
                 <title>Utiliti Examples</title>
             </Head>
-            <div className="row">
-                <div className="two columns">&nbsp;</div>
-                <div className="eight columns">
-                    <Header headerTextProp="Utiliti Examples" />
+            <header>
+                <div className="row">
+                    <div className="two columns">&nbsp;</div>
+                    <div className="eight columns">
+                        <Header headerTextProp="Utiliti Examples" />
+                    </div>
+                    <div className="two columns">&nbsp;</div>
                 </div>
-                <div className="two columns">&nbsp;</div>
-            </div>
-            <div className="row">
-                <div className="two columns">&nbsp;</div>
-                <div className="eight columns offset">{children}</div>
-                <div className="two columns">&nbsp;</div>
-            </div>
-            <div className="row">
-                <div className="two columns">&nbsp;</div>
-                <div className="eight columns">
-                    <Footer />
+            </header>
+            <main>
+                <div className="row">
+                    <div className="two columns">&nbsp;</div>
+                    <div className="eight columns offset">{children}</div>
+                    <div className="two columns">&nbsp;</div>
                 </div>
-                <div className="two columns">&nbsp;</div>
-            </div>
+            </main>
+            <footer>
+                <div className="row">
+                    <div className="two columns">&nbsp;</div>
+                    <div className="eight columns">
+                        <Footer />
+                    </div>
+                    <div className="two columns">&nbsp;</div>
+                </div>
+            </footer>
         </>
     );
 };
