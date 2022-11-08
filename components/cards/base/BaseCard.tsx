@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './Card.module.css';
+import styles from './BaseCard.module.css';
 
-export interface ICard {
+export interface IBaseCard {
     title: string;
     description: string;
     imgStyle: string;
@@ -12,7 +12,7 @@ export interface ICard {
     columns?: string;
 }
 
-const Card: React.FC<ICard> = ({
+const BaseCard: React.FC<IBaseCard> = ({
     title,
     description,
     imgStyle,
@@ -22,12 +22,12 @@ const Card: React.FC<ICard> = ({
 }) => {
     const imageStyle =
         imgStyle === 'rounded'
-            ? styles['card-image-rounded']
-            : styles['card-image-square'];
+            ? styles['BaseCard-image-rounded']
+            : styles['BaseCard-image-square'];
 
     return (
         <div className={`columns ${columns}`}>
-            <div className={styles.card}>
+            <div className={styles.BaseCard}>
                 {imgStyle !== 'none' ? (
                     <div>
                         <Image
@@ -39,17 +39,27 @@ const Card: React.FC<ICard> = ({
                         />
                     </div>
                 ) : null}
-                <div className="card-title">
+                <div className={styles.BaseCard_title}>
                     <h3>
                         <Link href={url}>{title}</Link>
                     </h3>
                 </div>
-                <div className="card-content">
+                <div className={styles.BaseCard_content}>
                     <p>{description}</p>
+                </div>
+                <div className={styles.BaseCard_links}>
+                    <div className="row">
+                        <div className="six columns">
+                            <Link href={url}>Demo</Link>
+                        </div>
+                        <div className="six columns">
+                            <Link href={url + '-guide'}>Guide</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Card;
+export default BaseCard;

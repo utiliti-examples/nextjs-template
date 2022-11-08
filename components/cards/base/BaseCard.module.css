@@ -1,9 +1,9 @@
 .container {}
 
-.card-image-rounded {
+.BaseCard-image-rounded {
     border-radius: 1rem;
 }
 
-.card-image-square {
+.BaseCard-image-square {
     border-radius: 0;
 }

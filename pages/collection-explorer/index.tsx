@@ -1,5 +1,5 @@
-import DefaultTemplate from '../components/layouts/default/DefaultTemplate';
-import BaseCard from '../components/cards/base/BaseCard';
+import DefaultTemplate from '../../components/layouts/default/DefaultTemplate';
+import BaseCard from '../../components/cards/base/BaseCard';
 
 import { NextPageWithLayout } from './page';
 
