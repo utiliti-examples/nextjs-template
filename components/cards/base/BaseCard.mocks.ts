@@ -1,4 +1,4 @@
-import { IBaseCard } from './BaseBaseCard';
+import { IBaseCard } from './BaseCard';
 
 const base: IBaseCard = {
     title: 'BaseCard Title',

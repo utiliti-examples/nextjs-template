@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import BaseCard, { IBaseCard } from './BaseBaseCard';
-import { mockBaseCardProps } from './BaseBaseCard.mocks';
+import BaseCard, { IBaseCard } from './BaseCard';
+import { mockBaseCardProps } from './BaseCard.mocks';
 
 export default {
-    title: 'components/BaseCard',
+    title: 'cards/base/BaseCard',
     component: BaseCard,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {},
