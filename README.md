@@ -29,9 +29,8 @@ npm install -g yarn
 ## Clone Project
 
 ```
-git clone https://github.com/utiliti-examples/nextjs-template
-mv nextjs-template your-project
-cd your-project
+git clone https://github.com/utiliti-examples/utiliti-examples 
+cd utiliti-examples
 ```
 
 ## Install Dependencies
@@ -68,6 +67,7 @@ Used for git hooks. Feel free to delete any of the ones you don't want, but thes
 
 ## Web Related
 
+### Global CSS
 -   `./pages/_app.tsx`
     -   Imports our CSS files globally from `./styles/`
 
@@ -75,6 +75,9 @@ Used for git hooks. Feel free to delete any of the ones you don't want, but thes
 
 -   Used Skeleton CSS for minimal responsiveness
     -   see: http://getskeleton.com/
+
+### Storybook
+Components are setup to work with Storybook.  Run `yarn storybook` to start a webserver in which you can view components in isolation at `https://localhost:6006`
 
 # Usage
 
@@ -90,3 +93,5 @@ Used for git hooks. Feel free to delete any of the ones you don't want, but thes
     -   prettify app
 -   `yarn prepare`
     -   This runs when yarn runs, sets up husky if not already
+-   `yarn storybook`
+    -   Run components in isolation for testing.
