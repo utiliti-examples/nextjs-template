@@ -3,7 +3,7 @@ import Footer, { IFooter } from './Footer';
 import { mockFooterProps } from './Footer.mocks';
 
 export default {
-    title: 'layouts/shared/Footer',
+    title: 'layouts/Footer',
     component: Footer,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {},
