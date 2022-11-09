@@ -1,0 +1,9 @@
+.container {}
+
+.GuideCard-image-rounded {
+    border-radius: 1rem;
+}
+
+.GuideCard-image-square {
+    border-radius: 0;
+}

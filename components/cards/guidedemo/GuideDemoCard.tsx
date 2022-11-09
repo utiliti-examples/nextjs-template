@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './BaseCard.module.css';
+import styles from './GuideDemoCard.module.css';
 
-export interface IBaseCard {
+export interface IGuideDemoCard {
     title: string;
     description: string;
     imgStyle: string;
@@ -12,7 +12,7 @@ export interface IBaseCard {
     columns?: string;
 }
 
-const BaseCard: React.FC<IBaseCard> = ({
+const GuideDemoCard: React.FC<IGuideDemoCard> = ({
     title,
     description,
     imgStyle,
@@ -22,12 +22,12 @@ const BaseCard: React.FC<IBaseCard> = ({
 }) => {
     const imageStyle =
         imgStyle === 'rounded'
-            ? styles['BaseCard-image-rounded']
-            : styles['BaseCard-image-square'];
+            ? styles['GuideDemoCard-image-rounded']
+            : styles['GuideDemoCard-image-square'];
 
     return (
         <div className={`columns ${columns}`}>
-            <div className={styles.BaseCard}>
+            <div className={styles.GuideDemoCard}>
                 {imgStyle !== 'none' ? (
                     <div>
                         <Image
@@ -39,15 +39,15 @@ const BaseCard: React.FC<IBaseCard> = ({
                         />
                     </div>
                 ) : null}
-                <div className={styles.BaseCard_title}>
+                <div className={styles.GuideDemoCard_title}>
                     <h4>
                         <Link href={url}>{title}</Link>
                     </h4>
                 </div>
-                <div className={styles.BaseCard_content}>
+                <div className={styles.GuideDemoCard_content}>
                     <p>{description}</p>
                 </div>
-                <div className={styles.BaseCard_links}>
+                <div className={styles.GuideDemoCard_links}>
                     <div className="row">
                         <div className="six columns">
                             <Link href={url}>Demo</Link>
@@ -62,4 +62,4 @@ const BaseCard: React.FC<IBaseCard> = ({
     );
 };
 
-export default BaseCard;
+export default GuideDemoCard;

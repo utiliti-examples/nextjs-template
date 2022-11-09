@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './BaseCard.module.css';
+import styles from './GuideCard.module.css';
 
-export interface IBaseCard {
+export interface IGuideCard {
     title: string;
     description: string;
     imgStyle: string;
@@ -12,7 +12,7 @@ export interface IBaseCard {
     columns?: string;
 }
 
-const BaseCard: React.FC<IBaseCard> = ({
+const GuideCard: React.FC<IGuideCard> = ({
     title,
     description,
     imgStyle,
@@ -22,12 +22,12 @@ const BaseCard: React.FC<IBaseCard> = ({
 }) => {
     const imageStyle =
         imgStyle === 'rounded'
-            ? styles['BaseCard-image-rounded']
-            : styles['BaseCard-image-square'];
+            ? styles['GuideCard-image-rounded']
+            : styles['GuideCard-image-square'];
 
     return (
         <div className={`columns ${columns}`}>
-            <div className={styles.BaseCard}>
+            <div className={styles.GuideCard}>
                 {imgStyle !== 'none' ? (
                     <div>
                         <Image
@@ -39,20 +39,17 @@ const BaseCard: React.FC<IBaseCard> = ({
                         />
                     </div>
                 ) : null}
-                <div className={styles.BaseCard_title}>
+                <div className={styles.GuideCard_title}>
                     <h4>
                         <Link href={url}>{title}</Link>
                     </h4>
                 </div>
-                <div className={styles.BaseCard_content}>
+                <div className={styles.GuideCard_content}>
                     <p>{description}</p>
                 </div>
-                <div className={styles.BaseCard_links}>
+                <div className={styles.GuideCard_links}>
                     <div className="row">
-                        <div className="six columns">
-                            <Link href={url}>Demo</Link>
-                        </div>
-                        <div className="six columns">
+                        <div className="u-full-width">
                             <Link href={url + '-guide'}>Guide</Link>
                         </div>
                     </div>
@@ -62,4 +59,4 @@ const BaseCard: React.FC<IBaseCard> = ({
     );
 };
 
-export default BaseCard;
+export default GuideCard;
