@@ -3,7 +3,7 @@ import BaseCard, { IBaseCard } from './BaseCard';
 import { mockBaseCardProps } from './BaseCard.mocks';
 
 export default {
-    title: 'cards/base/BaseCard',
+    title: 'cards/BaseCard',
     component: BaseCard,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {},

@@ -3,7 +3,7 @@ import Header, { IHeader } from './Header';
 import { mockHeaderProps } from './Header.mocks';
 
 export default {
-    title: 'layouts/shared/Header',
+    title: 'layouts/Header',
     component: Header,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {},

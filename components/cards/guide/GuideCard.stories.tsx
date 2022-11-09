@@ -3,7 +3,7 @@ import GuideCard, { IGuideCard } from './GuideCard';
 import { mockGuideCardProps } from './GuideCard.mocks';
 
 export default {
-    title: 'cards/base/GuideCard',
+    title: 'cards/GuideCard',
     component: GuideCard,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {},
