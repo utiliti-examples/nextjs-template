@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './Card.module.css';
+import styles from './GuideDemoCard.module.css';
 
-export interface ICard {
+export interface IGuideDemoCard {
     title: string;
     description: string;
     imgStyle: string;
@@ -12,22 +12,22 @@ export interface ICard {
     columns?: string;
 }
 
-const Card: React.FC<ICard> = ({
+const GuideDemoCard: React.FC<IGuideDemoCard> = ({
     title,
     description,
     imgStyle,
     url = '#',
     image = 'https://via.placeholder.com/300',
-    columns = 'three',
+    columns = 'four',
 }) => {
     const imageStyle =
         imgStyle === 'rounded'
-            ? styles['card-image-rounded']
-            : styles['card-image-square'];
+            ? styles['GuideDemoCard-image-rounded']
+            : styles['GuideDemoCard-image-square'];
 
     return (
         <div className={`columns ${columns}`}>
-            <div className={styles.card}>
+            <div className={styles.GuideDemoCard}>
                 {imgStyle !== 'none' ? (
                     <div>
                         <Image
@@ -39,17 +39,27 @@ const Card: React.FC<ICard> = ({
                         />
                     </div>
                 ) : null}
-                <div className="card-title">
-                    <h3>
+                <div className={styles.GuideDemoCard_title}>
+                    <h4>
                         <Link href={url}>{title}</Link>
-                    </h3>
+                    </h4>
                 </div>
-                <div className="card-content">
+                <div className={styles.GuideDemoCard_content}>
                     <p>{description}</p>
+                </div>
+                <div className={styles.GuideDemoCard_links}>
+                    <div className="row">
+                        <div className="six columns">
+                            <Link href={url}>Demo</Link>
+                        </div>
+                        <div className="six columns">
+                            <Link href={url + '-guide'}>Guide</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Card;
+export default GuideDemoCard;

@@ -3,12 +3,12 @@ import Head from 'next/head';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 
-import styles from './SinglePageTemplate.module.css';
+// import styles from './DefaultTemplate.module.css';
 
-export interface ISinglePageTemplate
+export interface IDefaultTemplate
     extends React.ComponentPropsWithoutRef<'div'> {}
 
-const SinglePageTemplate: React.FC<ISinglePageTemplate> = ({ children }) => {
+const DefaultTemplate: React.FC<IDefaultTemplate> = ({ children }) => {
     return (
         <>
             <Head>
@@ -43,4 +43,4 @@ const SinglePageTemplate: React.FC<ISinglePageTemplate> = ({ children }) => {
     );
 };
 
-export default SinglePageTemplate;
+export default DefaultTemplate;

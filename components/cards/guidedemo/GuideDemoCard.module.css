@@ -1,9 +1,9 @@
 .container {}
 
-.card-image-rounded {
+.GuideDemoCard-image-rounded {
     border-radius: 1rem;
 }
 
-.card-image-square {
+.GuideDemoCard-image-square {
     border-radius: 0;
 }

@@ -1,0 +1,9 @@
+.container {}
+
+.BaseCard-image-rounded {
+    border-radius: 1rem;
+}
+
+.BaseCard-image-square {
+    border-radius: 0;
+}
